@@ -1,0 +1,36 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Bokinfo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Gochi+Hand' rel='stylesheet' type='text/css'>
+    <script src="jquery-1.11.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="containsall">
+        <header>
+            <h1><a href="index.html">
+                <span style="color: #81EAC4">B</span><span style="color: #F5D35A">o</span><span style="color: #FC4E77">k</span><span
+                    style="color: #B647CA">i</span><span style="color: #81EAC4">n</span><span style="color: #F5D35A">f</span><span
+                        style="color: #FC4E77">o</span></a></h1>
+        </header>
+        <section id="error">
+        </section>
+        <section id="search">
+            <p>Sök fram en bok. Kopiera html-koden ur textrutan för valt sökresultat. Klistra in i blogginlägget i html-läge. Komplettera med info som saknas (ev. illustratör, länk till förlagets boksida, antal sidor...), verifiera köplänkarna och fixa det som eventuellt ser knasigt ut.</p>
+               <p> ISBN ger bäst sökresultat, men du kan även söka på titel, författare med mera.</p>
+            <form action="#" id="search_book">
+            <input type="text" id="search_param" placeholder="ISBN, titel, författare..." autofocus />
+            <input type="submit" id="search_button" value="Sök" />
+            </form>
+        </section>
+        <section>
+            <div id="search_results">
+            </div>
+        </section>
+        <footer>Bokinfo skapades för att autogenera bokinfo till <a href="http://www.barnboksprat.se">Barnboksprat</a><br />(men vill någon annan låna den går det bra)</footer>
+    </div>
+</body>
+</html>

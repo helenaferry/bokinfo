@@ -36,8 +36,8 @@
 
                 bookInfo = "<b>" + ((result.title) ? result.title : "") + "</b>\n" +
 	                					      "<br/>Författare: " + author + "\n" +
-	                					      "<br/>ISBN: " + ((result.isbn) ? result.isbn : "") + "\n" +
 	                					      "<br/>Förlag: " + publisher + " (" + ((result.date) ? result.date : "") + ")\n" +
+                                              "<br/>ISBN: " + ((result.isbn) ? result.isbn : "") + "\n" +
 	                					      "<br/>" + buyLink;
 
                 $("#search_results").append("<div class='panel'><div style='float: right'><textarea><hr/>" + bookInfo + "</textarea></div>" +
@@ -55,6 +55,8 @@ function formatAuthor(authorString) {
     if (!authorString) {
         return "";
     }
+    authorString = authorString.replace(" ", "");
+    authorString = authorString.replace(".", "");
     var names = authorString.split(",");
     return names[1] + " " + names[0];
 }
@@ -65,9 +67,9 @@ function formatPublisher(publisherString) {
     }
     if (publisherString.indexOf(":") > -1) {
         var parts = publisherString.split(":");
-        return parts[1];
+        return parts[1].trim();
     } else {
-        return publisherString;
+        return publisherString.trim();
     }
 }
 

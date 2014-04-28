@@ -55,10 +55,10 @@ function formatAuthor(authorString) {
     if (!authorString) {
         return "";
     }
-    authorString = authorString.replace(" ", "");
     authorString = authorString.replace(".", "");
+    authorString = authorString.replace(/[0-9]{4}-/g, "")
     var names = authorString.split(",");
-    return names[1] + " " + names[0];
+    return names[1].trim() + " " + names[0].trim();
 }
 
 function formatPublisher(publisherString) {

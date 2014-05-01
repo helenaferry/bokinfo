@@ -40,7 +40,7 @@
                                               "<br/>ISBN: " + ((result.isbn) ? result.isbn : "") + "\n" +
 	                					      "<br/>" + buyLink;
 
-                $("#search_results").append("<div class='panel'><div style='float: right'><textarea><hr/>" + bookInfo + "</textarea></div>" +
+                $("#search_results").append("<div class='panel'><div style='float: right'><textarea><hr/>" + bookInfo.replace(/<br\/>/g,'') + "</textarea></div>" +
 	                					      bookInfo +
 	                					      "</div>");
             }).fail(function (jqxhr, textStatus, error) {

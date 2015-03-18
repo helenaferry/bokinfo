@@ -88,6 +88,6 @@ function createBuyLink(isbn) {
     if (!isbn) {
         return "";
     } else {
-        return "K&ouml;p: t.ex. hos <a href='http://www.bokus.com/bok/" + isbn + "'>Bokus</a> eller <a href='http://www.adlibris.com/se/product.aspx?isbn=" + isbn + "'>Adlibris</A>";
+        return "K&ouml;p: t.ex. hos <a href='http://www.bokus.com/bok/" + isbn + "'>Bokus</a> eller <a href='http://www.adlibris.com/se/bok/bok-" + isbn + "'>Adlibris</A>";
     }
 }
